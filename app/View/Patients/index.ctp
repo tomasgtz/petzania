@@ -15,11 +15,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        <?php echo __('Lista de '.'Patients'); ?>        <small><?php echo __('Lista de '.'Patients'); ?></small>
+        <?php echo __('Lista de '.'Mascotas'); ?>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Inicio</a></li>
-        <li><?php echo $this->Html->link("Patients",array("action"=>"/index")); ?></li>
+        <li><?php echo $this->Html->link("Mascotas",array("action"=>"/index")); ?></li>
     </ol>
 </section>
 
@@ -30,7 +30,7 @@
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">
-<?php echo $this->Html->link("<i class='fa fa-plus'></i>&nbsp;Nuevo",array("action"=>"/add"),array("class"=>"btn btn-primary","escape"=>false)); ?>                    </h3>
+<?php echo $this->Html->link("<i class='fa fa-plus'></i>&nbsp;Registrar",array("action"=>"/add"),array("class"=>"btn btn-primary","escape"=>false)); ?>                    </h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive">
@@ -38,22 +38,16 @@
                         <thead>
                             <tr>
                                                                 <th>id</th>
-                                                                <th>pet_name</th>
-                                                                <th>pet_race</th>
-                                                                <th>pet_dob</th>
-                                                                <th>owner</th>
-                                                                <th>owner_phone</th>
+                                                                <th>Nombre</th>
+                                                                <th>Raza</th>
+                                                                <th>F. Nacimiento</th>
+                                                                <th>Dueño</th>
+                                                                <th>Tel</th>
                                                                 <th>email</th>
-                                                                <th>comments</th>
-                                                                <th>address_street</th>
-                                                                <th>address_number</th>
-                                                                <th>address_col</th>
-                                                                <th>address_city</th>
-                                                                <th>address_zip</th>
-                                                                <th>status_id</th>
-                                                                <th>created</th>
-                                                                <th>modified</th>
-                                                                <th class="actions"><?php echo 'acciones'; ?></th>
+                                                                <th>Comentarios</th>
+                                                                <th>Direccion</th>
+                                                                <th>Estatus</th>
+                                                                <th class="actions"><?php echo 'Acciones'; ?></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,20 +61,20 @@
 		<td><?php echo h($patient['Patient']['owner_phone']); ?></td>
 		<td><?php echo h($patient['Patient']['email']); ?></td>
 		<td><?php echo h($patient['Patient']['comments']); ?></td>
-		<td><?php echo h($patient['Patient']['address_street']); ?></td>
-		<td><?php echo h($patient['Patient']['address_number']); ?></td>
-		<td><?php echo h($patient['Patient']['address_col']); ?></td>
-		<td><?php echo h($patient['Patient']['address_city']); ?></td>
-		<td><?php echo h($patient['Patient']['address_zip']); ?></td>
+		<td><?php echo h($patient['Patient']['address_street']); ?>
+		<?php echo h($patient['Patient']['address_number']); ?>
+		<?php echo h($patient['Patient']['address_col']); ?>
+		<?php echo h($patient['Patient']['address_city']); ?>
+		<?php echo h($patient['Patient']['address_zip']); ?></td>
 		<td>
 			<?php echo $this->Html->link($patient['Status']['id'], array('controller' => 'statuses', 'action' => 'view', $patient['Status']['id'])); ?>
 		</td>
-		<td><?php echo h($patient['Patient']['created']); ?></td>
-		<td><?php echo h($patient['Patient']['modified']); ?></td>
                             <td class="actions" style="text-align:center">
-<?php echo $this->Html->link('',array('action'=>'edit',$patient['Patient']['id']),array('class'=>'fa fa-edit fa-lg')); ?>
-&nbsp;&nbsp;
-<?php echo $this->Form->postLink('',array('action'=>'delete',$patient['Patient']['id']),array('confirm'=>__('Esta seguro de eliminar la dirección # %s?', $patient['Patient']['id']), 'class' => 'fa fa-trash-o text-red fa-lg')); ?>                            </td>
+				<?php echo $this->Html->link('',array('controller'=> 'Encounters', 'action'=>'add',$patient['Patient']['id']),array('class'=>'fa fa-stethoscope fa-lg')); ?>
+				&nbsp;&nbsp;
+				<?php echo $this->Html->link('',array('action'=>'edit',$patient['Patient']['id']),array('class'=>'fa fa-edit fa-lg')); ?>
+				&nbsp;&nbsp;
+				<?php echo $this->Form->postLink('',array('action'=>'delete',$patient['Patient']['id']),array('confirm'=>__('Esta seguro de eliminar el registro # %s?', $patient['Patient']['id']), 'class' => 'fa fa-trash-o text-red fa-lg')); ?>                            </td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>

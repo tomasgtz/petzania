@@ -391,7 +391,7 @@
                             ),
                             array(
                                 'title' => '<i class="fa fa-file-image-o" aria-hidden="true"></i><span>Consultas</span>',
-                                'redirect' => array('controller' => 'Questions', 'action' => 'index'),
+                                'redirect' => array('controller' => 'Encounters', 'action' => 'index'),
                                 'normalUser' => 0
                             ),
                             array(

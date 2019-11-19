@@ -28,79 +28,79 @@ echo $this->Html->script('/bower_components/select2/dist/js/select2.full.min.js'
             <?php echo $this->Form->create('Patient',array('class' => 'form-horizontal')); ?>
             <?php echo $this->Form->input('id',array('class' => 'form-control', 'label' => false)); ?>
                             <div class="form-group">
-                                <label for="pet_name" class="col-sm-2 control-label">pet_name</label>
+                                <label for="pet_name" class="col-sm-2 control-label">Nombre de la mascota</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('pet_name',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="pet_race" class="col-sm-2 control-label">pet_race</label>
+                                <label for="pet_race" class="col-sm-2 control-label">Raza de la mascota</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('pet_race',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="pet_dob" class="col-sm-2 control-label">pet_dob</label>
+                                <label for="pet_dob" class="col-sm-2 control-label">F.Nac. de la mascota</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('pet_dob',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="owner" class="col-sm-2 control-label">owner</label>
+                                <label for="owner" class="col-sm-2 control-label">Due&ntilde;o</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('owner',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="owner_phone" class="col-sm-2 control-label">owner_phone</label>
+                                <label for="owner_phone" class="col-sm-2 control-label">Tel&eacute;fono</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('owner_phone',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label">email</label>
+                                <label for="email" class="col-sm-2 control-label">Correo electr&oacute;nico</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('email',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="comments" class="col-sm-2 control-label">comments</label>
+                                <label for="comments" class="col-sm-2 control-label">Comentarios</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('comments',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="address_street" class="col-sm-2 control-label">address_street</label>
+                                <label for="address_street" class="col-sm-2 control-label">Calle</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('address_street',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="address_number" class="col-sm-2 control-label">address_number</label>
+                                <label for="address_number" class="col-sm-2 control-label">N&uacute;mero</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('address_number',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="address_col" class="col-sm-2 control-label">address_col</label>
+                                <label for="address_col" class="col-sm-2 control-label">Colonia</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('address_col',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="address_city" class="col-sm-2 control-label">address_city</label>
+                                <label for="address_city" class="col-sm-2 control-label">Ciudad</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('address_city',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="address_zip" class="col-sm-2 control-label">address_zip</label>
+                                <label for="address_zip" class="col-sm-2 control-label">C.P.</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('address_zip',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="status_id" class="col-sm-2 control-label">status_id</label>
+                                <label for="status_id" class="col-sm-2 control-label">Estatus</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('status_id',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>

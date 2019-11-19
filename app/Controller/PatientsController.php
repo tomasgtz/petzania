@@ -34,7 +34,7 @@ class PatientsController extends AppController {
  */
 	public function view($id = null) {
 		if (!$this->Patient->exists($id)) {
-			throw new NotFoundException(__('Invalid patient'));
+			throw new NotFoundException(__('Mascota no encontrada'));
 		}
 		$options = array('conditions' => array('Patient.' . $this->Patient->primaryKey => $id));
 		$this->set('patient', $this->Patient->find('first', $options));
@@ -49,10 +49,10 @@ class PatientsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Patient->create();
 			if ($this->Patient->save($this->request->data)) {
-				$this->Flash->success(__('The patient has been saved.'));
+				$this->Flash->success(__('La informacion de la mascota fue guardada exitosamente'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Flash->error(__('The patient could not be saved. Please, try again.'));
+				$this->Flash->error(__('La mascota no pudo ser regisrada. Por favor intente nuevamente.'));
 			}
 		}
 		$statuses = $this->Patient->Status->find('list');
@@ -72,10 +72,10 @@ class PatientsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Patient->save($this->request->data)) {
-				$this->Flash->success(__('The patient has been saved.'));
+				$this->Flash->success(__('La informacion de la mascota fue guardada exitosamente'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Flash->error(__('The patient could not be saved. Please, try again.'));
+				$this->Flash->error(__('La informacion de la mascota no pudo ser actualizada. Por favor intente nuevamente'));
 			}
 		} else {
 			$options = array('conditions' => array('Patient.' . $this->Patient->primaryKey => $id));
@@ -99,9 +99,9 @@ class PatientsController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Patient->delete()) {
-			$this->Flash->success(__('The patient has been deleted.'));
+			$this->Flash->success(__('La informacion de la mascota fue borrada exitosamente'));
 		} else {
-			$this->Flash->error(__('The patient could not be deleted. Please, try again.'));
+			$this->Flash->error(__('La mascota no pudo ser borrada. Por favor intente nuevamente'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
