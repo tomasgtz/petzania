@@ -192,7 +192,7 @@
                                 'normalUser' => 1
                             ),
 			    array(
-                                'title' => '<i class="fa fa-cogs" aria-hidden="true"></i><span>Opciones</span>',
+                                'title' => '<i class="fa fa-cogs" aria-hidden="true"></i><span>Config Agenda</span>',
                                 'redirect' => array('controller' => 'Appointments', 'action' => 'manager'),
                                 'normalUser' => 1
                             ),
