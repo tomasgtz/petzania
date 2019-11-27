@@ -38,7 +38,7 @@
       <div id="nav"></div>
     </div>
     <div class="column-main">
-      <div class="toolbar">Puede reservar en cualquier espacio marcado como Disponible:</div>
+      <div class="toolbar"></div>
       <div id="calendar"></div>
     </div>
 
