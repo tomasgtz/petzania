@@ -5,20 +5,20 @@
   <h1>Solicitar cita</h1>
 
   <div class="space">
-    <div>Start:</div>
+    <div>Inicio:</div>
     <div><input type="text" id="start" name="start"
                 value="<?php print (new DateTime($appointment['Appointment']['appointment_start']))->format('d/M/y g:i A') ?>" disabled/>
     </div>
   </div>
 
   <div class="space">
-    <div>End:</div>
+    <div>Fin:</div>
     <div><input type="text" id="end" name="end"
                 value="<?php print (new DateTime($appointment['Appointment']['appointment_end']))->format('d/M/y g:i A') ?>" disabled/></div>
   </div>
 
   <div class="space">
-    <div>Your Name:</div>
+    <div>Nombre de la mascota:</div>
     <div><input type="text" id="name" name="name" value=""/></div>
   </div>
 

@@ -26,7 +26,7 @@ class AppointmentsController extends AppController {
 	}
 
 	public function beforeFilter() {
-		$this->Auth->allow('index');
+		$this->Auth->allow('index','events_free', 'request_save', 'request');
 	}
 
 	public function clear() {
@@ -374,8 +374,7 @@ WHERE (appointment_status = 'free' OR (appointment_status <> 'free' AND appointm
 	}
 
 
-	public function load_timeline($scale, $days, $start_day, $user_id)
-	{
+	public function load_timeline($scale, $days, $start_day, $user_id) {
 	  $this->getShiftHours($user_id);
 
 	  switch ($scale) {

@@ -1,4 +1,3 @@
-
 <script>
   var nav = new DayPilot.Navigator("nav");
   nav.selectMode = "week";
@@ -48,7 +47,7 @@
       }
     });
 
-    modal.showUrl("request/" + args.e.id());
+    modal.showUrl("Appointments/request/" + args.e.id());
   };
   calendar.init();
 
@@ -62,7 +61,7 @@
       end: nav.visibleEnd().toString()
     };
 
-    $.post("events_free", JSON.stringify(params), function (data) {
+    $.post("Appointments/events_free", JSON.stringify(params), function (data) {
       if (day) {
         calendar.startDate = day;
       }
