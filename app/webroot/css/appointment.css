@@ -1,0 +1,41 @@
+
+
+select {
+    padding: 5px;
+}
+button {
+    padding: 5px 15px;
+}
+.space { margin: 10px 0px 10px 0px; }
+
+.main { padding: 10px }
+
+
+.column-main {
+    margin-left: 220px;
+}
+
+.column-left {
+    float:left;
+    width:220px;
+}
+
+.toolbar {
+    margin: 10px 0px;
+}
+
+.toolbar > .toolbar-item:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.toolbar-item {
+    padding: 0px 10px;
+}
+
+
+.scheduler_default_corner div:nth-of-type(2) {
+    visibility: hidden !important;
+}
+.calendar_default_corner div:nth-of-type(2) {
+    visibility: hidden !important;
+}

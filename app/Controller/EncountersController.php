@@ -91,10 +91,19 @@ class EncountersController extends AppController {
 			$options = array('conditions' => array('Encounter.' . $this->Encounter->primaryKey => $id));
 			$this->request->data = $this->Encounter->find('first', $options);
 		}
-		$patients = $this->Encounter->Patient->find('list');
-		$users = $this->Encounter->User->find('list');
-		$statuses = $this->Encounter->Status->find('list');
-		$this->set(compact('patients', 'users', 'statuses'));
+
+		$this->loadModel('User');
+		$users = $this->User->find('list', array('conditions' => array( 'User.status_id' => '1')));
+
+		$this->loadModel('Patient');
+		$patient = $this->Patient->find('first', array('conditions' => array( 'Patient.id' => $this->Encounter->patient_id)));
+		
+		date_default_timezone_set('America/Monterrey');
+		$current_datetime = substr($this->request->data["Encounter"]["encounter_date"], 0, 10) . 'T' . substr($this->request->data["Encounter"]["encounter_date"], 11, 16) ;
+
+        $statuses = $this->User->Status->find('list', array('fields'=> array('id', 'text')));
+		$this->set(compact('patient', 'users', 'statuses', 'current_datetime'));
+
 	}
 
 /**

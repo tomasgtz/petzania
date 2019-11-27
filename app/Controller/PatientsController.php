@@ -55,7 +55,10 @@ class PatientsController extends AppController {
 				$this->Flash->error(__('La mascota no pudo ser regisrada. Por favor intente nuevamente.'));
 			}
 		}
-		$statuses = $this->Patient->Status->find('list');
+
+		$this->loadModel('User');
+		$statuses = $this->User->Status->find('list', array('fields'=> array('id', 'text')));
+
 		$this->set(compact('statuses'));
 	}
 
@@ -81,8 +84,16 @@ class PatientsController extends AppController {
 			$options = array('conditions' => array('Patient.' . $this->Patient->primaryKey => $id));
 			$this->request->data = $this->Patient->find('first', $options);
 		}
-		$statuses = $this->Patient->Status->find('list');
-		$this->set(compact('statuses'));
+
+		$this->loadModel('User');
+		$statuses = $this->User->Status->find('list', array('fields'=> array('id', 'text')));
+
+		$this->loadModel('Encounter');
+		$encounters = $this->Encounter->find('all', array('fields'=> array('id','encounter_date','reason','dx','rx','comments','User.name'), 
+											'conditions'=>array('Encounter.status_id' => '1', 'patient_id'=> $id)));
+
+		$this->set(compact('statuses', 'encounters'));
+
 	}
 
 /**

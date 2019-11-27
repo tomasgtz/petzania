@@ -15,11 +15,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        <?php echo __('Lista de '.'Users'); ?>        <small><?php echo __('Lista de '.'Users'); ?></small>
+        <?php echo __('Lista de Usuarios'); ?>
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Inicio</a></li>
-        <li><?php echo $this->Html->link("Users",array("action"=>"/index")); ?></li>
+        <li><?php echo $this->Html->link("Usuarios",array("action"=>"/index")); ?></li>
     </ol>
 </section>
 
@@ -37,41 +37,32 @@
                     <table id="table1" class="table table-striped table-bordered">
                         <thead>
                             <tr>
-                                                                <th>id</th>
-                                                                <th>username</th>
-                                                                <th>password</th>
-                                                                <th>role</th>
-                                                                <th>group_id</th>
-                                                                <th>created</th>
-                                                                <th>modified</th>
-                                                                <th>status_id</th>
-                                                                <th>reset_password_token</th>
-                                                                <th>token_created_at</th>
-                                                                <th class="actions"><?php echo 'acciones'; ?></th>
+				<th>id</th>
+				<th>Nombre</th>
+				<th>Correo</th>
+				<th>Horario de consulta</th>
+				<th>Rol</th>
+				<th>Estatus</th>
+				<th class="actions"><?php echo 'Acciones'; ?></th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($users as $user): ?>
-<tr>
+	<tr>
 		<td><?php echo h($user['User']['id']); ?></td>
+		<td><?php echo h($user['User']['name']); ?></td>
 		<td><?php echo h($user['User']['username']); ?></td>
-		<td><?php echo h($user['User']['password']); ?></td>
+		<td><?php echo 'AM ' . h($user['User']['morning_shift_starts']) .  ' - ' . h($user['User']['morning_shift_ends']); ?>
+		<br>
+			<?php echo 'PM ' . h($user['User']['afternoon_shift_starts']) .  ' - ' . h($user['User']['afternoon_shift_ends']); ?>
+		</td>
 		<td><?php echo h($user['User']['role']); ?></td>
-		<td>
-			<?php echo $this->Html->link($user['Group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id'])); ?>
-		</td>
-		<td><?php echo h($user['User']['created']); ?></td>
-		<td><?php echo h($user['User']['modified']); ?></td>
-		<td>
-			<?php echo $this->Html->link($user['Status']['id'], array('controller' => 'statuses', 'action' => 'view', $user['Status']['id'])); ?>
-		</td>
-		<td><?php echo h($user['User']['reset_password_token']); ?></td>
-		<td><?php echo h($user['User']['token_created_at']); ?></td>
-                            <td class="actions" style="text-align:center">
-<?php echo $this->Html->link('',array('action'=>'edit',$user['User']['id']),array('class'=>'fa fa-edit fa-lg')); ?>
-&nbsp;&nbsp;
-<?php echo $this->Form->postLink('',array('action'=>'delete',$user['User']['id']),array('confirm'=>__('Esta seguro de eliminar la dirección # %s?', $user['User']['id']), 'class' => 'fa fa-trash-o text-red fa-lg')); ?>                            </td>
-                            </tr>
+		<td><?php echo h($user['Status']['text']); ?></td>
+		<td class="actions" style="text-align:center">
+			<?php echo $this->Html->link('',array('action'=>'edit',$user['User']['id']),array('class'=>'fa fa-edit fa-lg')); ?>
+			&nbsp;&nbsp;
+			<?php echo $this->Form->postLink('',array('action'=>'delete',$user['User']['id']),array('confirm'=>__('Esta seguro de eliminar la dirección # %s?', $user['User']['id']), 'class' => 'fa fa-trash-o text-red fa-lg')); ?>                            </td>
+	</tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

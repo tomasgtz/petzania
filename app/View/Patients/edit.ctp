@@ -8,10 +8,10 @@ echo $this->Html->css('/bower_components/select2/dist/css/select2.min.css');
 echo $this->Html->script('/bower_components/select2/dist/js/select2.full.min.js');
 ?><!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>Edición de registro<small>Edición de registro</small></h1>    <ol class="breadcrumb">
+    <h1>Edición de registro</h1>    <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Inicio</a></li>
-        <li><?php echo $this->Html->link("Patients",array("action"=>"/index")); ?></li>
-        <li class="active">edit</li>    </ol>    
+        <li><?php echo $this->Html->link("Mascotas",array("action"=>"/index")); ?></li>
+        <li class="active">Editar</li>    </ol>    
 </section>
 
 <section class="content">
@@ -123,3 +123,51 @@ echo $this->Html->script('/bower_components/select2/dist/js/select2.full.min.js'
 $('#PatientStatusId').select2();
     });
 </script>
+
+
+
+
+<section class="content">
+<h3>Historial de consultas</h3>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive">
+                    <table id="table1" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+				<th>id</th>
+				<th>Fecha de consulta</th>
+				<th>Nombre del m&eacute;dico</th>
+				<th>Motivo de la consulta</th>
+				<th>Dx</th>
+				<th>Rx</th>
+				<th>Comentarios</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($encounters as $encounter): ?>
+<tr>
+		<td><?php echo h($encounter['Encounter']['id']); ?></td>
+		<td><?php echo h($encounter['Encounter']['encounter_date']); ?></td>
+		<td><?php echo h($encounter['User']['name']); ?></td>
+		<td><?php echo h($encounter['Encounter']['reason']); ?></td>
+		<td><?php echo h($encounter['Encounter']['dx']); ?></td>
+		<td><?php echo h($encounter['Encounter']['rx']); ?></td>
+		<td><?php echo h($encounter['Encounter']['comments']); ?></td>
+</tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

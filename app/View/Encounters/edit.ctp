@@ -8,10 +8,11 @@ echo $this->Html->css('/bower_components/select2/dist/css/select2.min.css');
 echo $this->Html->script('/bower_components/select2/dist/js/select2.full.min.js');
 ?><!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>Edición de registro<small>Edición de registro</small></h1>    <ol class="breadcrumb">
+
+    <h1>Edición de consulta</h1>    <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Inicio</a></li>
-        <li><?php echo $this->Html->link("Encounters",array("action"=>"/index")); ?></li>
-        <li class="active">edit</li>    </ol>    
+        <li><?php echo $this->Html->link("Consultas",array("action"=>"/index")); ?></li>
+        <li class="active">Editar</li>    </ol>    
 </section>
 
 <section class="content">
@@ -28,49 +29,52 @@ echo $this->Html->script('/bower_components/select2/dist/js/select2.full.min.js'
             <?php echo $this->Form->create('Encounter',array('class' => 'form-horizontal')); ?>
             <?php echo $this->Form->input('id',array('class' => 'form-control', 'label' => false)); ?>
                             <div class="form-group">
-                                <label for="patient_id" class="col-sm-2 control-label">patient_id</label>
+                                <label for="patient_id" class="col-sm-2 control-label">Mascota</label>
                                     <div class="col-sm-6 required">
-                                        <?php echo $this->Form->input('patient_id',array('class' => 'form-control', 'label' => false)); ?>
+				    	<?php echo $this->Form->input('patient_name',array('type'=> 'text', 'readOnly' => 'readOnly', 'class' => 'form-control', 'label' => false, 'value' => $this->request->data["Patient"]["pet_name"])); ?>
+					<?php echo $this->Form->input('patient_id',array('type'=> 'hidden', 'value' => $this->request->data["Patient"]["id"])); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="encounter_date" class="col-sm-2 control-label">encounter_date</label>
-                                    <div class="col-sm-6 required">
-                                        <?php echo $this->Form->input('encounter_date',array('class' => 'form-control', 'label' => false)); ?>
+                                <label for="encounter_date" class="col-sm-2 control-label">Fecha de consulta</label>
+                                    <div class="col-sm-6">
+                                        <?php echo $this->Form->input('encounter_date',array('type'=> 'text', 'readOnly' => 'readOnly', 'required'=> 'false', 'type'=> 'datetime-local', 'class' => 'form-control', 'label' => false, 'value' => $current_datetime)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="user_id" class="col-sm-2 control-label">user_id</label>
+                                <label for="user_id" class="col-sm-2 control-label">Nombre del m&eacute;dico</label>
+
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('user_id',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="reason" class="col-sm-2 control-label">reason</label>
+                                <label for="reason" class="col-sm-2 control-label">Motivo de la consulta</label>
+
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('reason',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="dx" class="col-sm-2 control-label">dx</label>
+                                <label for="dx" class="col-sm-2 control-label">Dx</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('dx',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="rx" class="col-sm-2 control-label">rx</label>
+                                <label for="rx" class="col-sm-2 control-label">Rx</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('rx',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="comments" class="col-sm-2 control-label">comments</label>
+                                <label for="comments" class="col-sm-2 control-label">Comentarios</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('comments',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="status_id" class="col-sm-2 control-label">status_id</label>
+                                <label for="status_id" class="col-sm-2 control-label">Estatus</label>
                                     <div class="col-sm-6 required">
                                         <?php echo $this->Form->input('status_id',array('class' => 'form-control', 'label' => false)); ?>
                                     </div>
