@@ -14,7 +14,7 @@
                         <label for='scale-hours'><input type="radio" value="hours" name="scale" id='scale-hours'
                                                         checked> Horas</label>
                         <label for='scale-shifts'><input type="radio" value="shifts" name="scale" id='scale-shifts'> Turnos</label></span>
-        <span class="toolbar-item"><label for="business-only"><input type="checkbox" id="business-only"> Mostrar solo horas laborales</label></span>
+        <span class="toolbar-item"><label for="business-only"><input type="checkbox" id="business-only"> Solo ver horas laborales</label></span>
         <span class="toolbar-item">Espacios: <button id="clear">Borrar disponibles</button> Borra todos los espacios disponibles de este mes</span>
 
       </div>
