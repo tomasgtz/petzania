@@ -48,12 +48,12 @@
         <?php echo $this->Form->create('User'); ?>
   <div class="form-group has-feedback">
     <label for="UserUsername" class="text-uppercase">Correo</label>
-    <?php echo $this->Form->email('username',array("class" => "form-control", "label" => false, "placeholder" => "Correo electr&oacute;nico", "autocomplete" => "off")); ?>
+    <?php echo $this->Form->email('username',array("class" => "form-control", "label" => false, "placeholder" => "Correo electronico", "autocomplete" => "off")); ?>
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
   </div>
   <div class="form-group has-feedback">
     <label for="UserPassword" class="text-uppercase">Contrase&ntilde;a</label>
-    <?php echo $this->Form->password('password',array("class" => "form-control", "label" => false, "placeholder" => "Contrase&ntilde;a", "autocomplete" => "off")); ?>
+    <?php echo $this->Form->password('password',array("class" => "form-control", "label" => false, "placeholder" => "Contrasena", "autocomplete" => "off")); ?>
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
   </div>
   
