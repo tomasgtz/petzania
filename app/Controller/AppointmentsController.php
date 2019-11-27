@@ -23,7 +23,10 @@ class AppointmentsController extends AppController {
 
 	public function index() {
 		$this->layout = 'appointment' ;
+	}
 
+	public function beforeFilter() {
+		$this->Auth->allow('index');
 	}
 
 	public function clear() {
