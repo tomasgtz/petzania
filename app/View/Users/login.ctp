@@ -48,24 +48,24 @@
         <?php echo $this->Form->create('User'); ?>
   <div class="form-group has-feedback">
     <label for="UserUsername" class="text-uppercase">Correo</label>
-    <?php echo $this->Form->email('username',array("class" => "form-control", "label" => false, "placeholder" => "Correo electrónico", "autocomplete" => "off")); ?>
+    <?php echo $this->Form->email('username',array("class" => "form-control", "label" => false, "placeholder" => "Correo electr&oacute;nico", "autocomplete" => "off")); ?>
     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
   </div>
   <div class="form-group has-feedback">
-    <label for="UserPassword" class="text-uppercase">Contraseña</label>
-    <?php echo $this->Form->password('password',array("class" => "form-control", "label" => false, "placeholder" => "Contraseña", "autocomplete" => "off")); ?>
+    <label for="UserPassword" class="text-uppercase">Contrase&ntilde;a</label>
+    <?php echo $this->Form->password('password',array("class" => "form-control", "label" => false, "placeholder" => "Contrase&ntilde;a", "autocomplete" => "off")); ?>
     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
   </div>
   
   
   <div class="form-check">
-    <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar sesión</button>
+    <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar sesi&oacute;n</button>
   </div>
   
 <?php echo $this->Form->end(); ?>
 
 <br>
-    <?php echo $this->Html->link('¿Olvidaste tú contraseña?', array('action' => 'forgotPassword')); ?>
+    <?php echo $this->Html->link('¿Olvidaste t&uacute; contrase&ntilde;a?', array('action' => 'forgotPassword')); ?>
 
     </div>
     <div class="col-md-8 banner-sec">

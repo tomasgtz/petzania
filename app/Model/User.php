@@ -1,9 +1,6 @@
 <?php
 App::uses('AppModel', 'Model');
-<<<<<<< HEAD
-=======
 App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
->>>>>>> init
 /**
  * User Model
  *
