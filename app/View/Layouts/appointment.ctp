@@ -20,7 +20,7 @@
 <div class="jumbotron">
     <div class="container">
       <h1 class="display-3">Reservaciones de citas</h1>
-      <p>Gracias por su preferencia, a continuaci&oacute;n se muestra nuestro calendario de atenci&oacute;n<br>Cada celda marcada en verde es un espacio disponible en el que puede solicitar una cita con nosotros</p>
+      <p>Gracias por su preferencia, a continuaci&oacute;n se muestra nuestro calendario de atenci&oacute;n<br>Cada celda marcada en <font color="green">verde</font> es un espacio disponible en el que puede solicitar una cita.</p>
     </div>
   </div>
 
