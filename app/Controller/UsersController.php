@@ -207,10 +207,10 @@ class UsersController extends AppController {
             $this->User->recursive = 0;
             $User = $this->User->read();
 
-            $mailer = new CakeEmail('NOM-035');
-            $mailer->from(array('no-reply@yokatia.mx' => 'N035'));
+            $mailer = new CakeEmail('Petszania');
+            $mailer->from(array('no-reply@ypetszania' => 'Petszania'));
             $mailer->to($User['User']['username']);
-            $mailer->subject('Restablecimiento de contraseña de la cuenta de NOM-035');
+            $mailer->subject('Restablecimiento de contraseña de la cuenta de Petszania');
             $mailer->emailFormat('html');
             $mailer->template('reset_password_request', 'default');
             $mailer->viewVars(compact('User'));
@@ -231,10 +231,10 @@ class UsersController extends AppController {
             $this->User->recursive = 0;
             $User = $this->User->read();
 
-            $mailer = new CakeEmail('NOM-035');
-            $mailer->from(array('no-reply@yokatia.mx' => 'N035'));
+            $mailer = new CakeEmail('Petszania');
+            $mailer->from(array('no-reply@ypetszania' => 'Petszania'));
             $mailer->to($User['User']['username']);
-            $mailer->subject('La contraseña del portal N035 ha sido cambiada');
+            $mailer->subject('La contraseña del portal Petszania ha sido cambiada');
             $mailer->emailFormat('html');
             $mailer->template('password_reset_success', 'default');
             $mailer->viewVars(compact('User'));

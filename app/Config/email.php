@@ -88,11 +88,11 @@ class EmailConfig {
 		//'headerCharset' => 'utf-8',
 	);
 
-	public $yokatia = array(
-		'host' => 'ssl://mail.yokatia.mx',
+	public $petszania = array(
+		'host' => 'ssl://mail.petszania.com',
 		'port' => 465,
-		'username' => 'no-reply@yokatia.mx',
-		'password' => '1WDcOtjy.79W',
+		'username' => 'no-reply@petszania.com',
+		'password' => 'FpFob6znC7Zs',
 		'transport' => 'Smtp',
 		'log' => true,
 	);
