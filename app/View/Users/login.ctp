@@ -65,7 +65,7 @@
 <?php echo $this->Form->end(); ?>
 
 <br>
-    <?php echo $this->Html->link('¿Olvidaste t&uacute; contrase&ntilde;a?', array('action' => 'forgotPassword')); ?>
+    <?php echo $this->Html->link('¿Olvidaste tu contrasena?', array('action' => 'forgotPassword')); ?>
 
     </div>
     <div class="col-md-8 banner-sec">
