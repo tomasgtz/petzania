@@ -92,8 +92,9 @@ class EmailConfig {
 		'host' => 'ssl://mail.petszania.com',
 		'port' => 465,
 		'username' => 'no-reply@petszania.com',
-		'password' => 'FpFob6znC7Zs',
+		'password' => '7s6h4nmgz2yi',
 		'transport' => 'Smtp',
 		'log' => true,
+		'ssl' => true
 	);
 }
