@@ -1,25 +1,25 @@
 <div style="padding:10px">
 
-  <h1>Edit Appointment Slot</h1>
+  <h1>Modificar Cita</h1>
 
   <div class="space">
-    <button id="delete" id="delete">Delete</button>
+    <button id="delete" id="delete" class="btn btn-danger">Borrar</button>
   </div>
 
   <div class="space">
-    <div>Start:</div>
+    <div>Inicio:</div>
     <div><input type="text" id="start" name="start" disabled
                 value="<?php print (new DateTime($appointment['Appointment']['appointment_start']))->format('d/M/y g:i A') ?>"/></div>
   </div>
 
   <div class="space">
-    <div>End:</div>
+    <div>Fin:</div>
     <div><input type="text" id="end" name="end" disabled
                 value="<?php print (new DateTime($appointment['Appointment']['appointment_end']))->format('d/M/y g:i A') ?>"/></div>
   </div>
 
   <div class="space">
-    <div>Doctor:</div>
+    <div>M&eacute;dico:</div>
     <div>
       <select id="resource" name="resource" disabled ng-model="appointment.doctor">
         <?php
@@ -38,7 +38,7 @@
   </div>
 
   <div class="space">
-    <div>Status:</div>
+    <div>Estatus:</div>
     <div>
       <select id="status" name="status">
         <?php
@@ -59,10 +59,13 @@
     </div>
   </div>
 
-  <div>Name:</div>
+  <div>Mascota:</div>
   <div><input type="text" id="name" name="name" value="<?php echo $appointment['Appointment']['appointment_patient_name'] ?>"/></div>
 
-  <div class="space"><input type="submit" value="Save" id="save"/> <a href="" id="cancel">Cancel</a></div>
+  <div>Tel:</div>
+  <div><input type="text" id="name" name="name" value="<?php echo $appointment['Appointment']['appointment_patient_phone'] ?>"/></div>
+
+  <div class="space"><input type="submit" value="Save" id="save" class="btn btn-primary"/> <a href="" id="cancel">Cancelar</a></div>
 
 </div>
 

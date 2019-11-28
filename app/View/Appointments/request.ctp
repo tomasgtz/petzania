@@ -2,7 +2,7 @@
 
 <!-- <form id="f" action="request_save" style="" method="POST"> -->
   <input type="hidden" name="id" id="id" value="<?php echo h($appointment['Appointment']['id']); ?>"/>
-  <h1>Solicitar cita</h1>
+  <h1>Reservar cita</h1>
 
   <div class="space">
     <div>Inicio:</div>
@@ -22,7 +22,12 @@
     <div><input type="text" id="name" name="name" value=""/></div>
   </div>
 
-  <div class="space"><input type="submit" value="Save"/> <a href="#" id="cancel">Cancel</a></div>
+  <div class="space">
+    <div>Telefono:</div>
+    <div><input type="text" id="phone" name="phone" value="" required/></div>
+  </div>
+
+  <div class="space"><input type="submit" value="Save" class="btn btn-primary"/> <a href="#" id="cancel">Cancelar</a></div>
 </form>
 
 <script type="text/javascript">

@@ -9,14 +9,13 @@
 </section>
 
 <section class="content" style="width:95%">
-
 	<div class="row">
 		<div class="column-left">
 		      <div id="nav"></div>
 		      <div class="row">
 			<label for="doctor" class="col-sm-3 control-label">M&eacute;dico</label>
 			<div class="col-sm-8 required">
-				<?php echo $this->Form->input('user',array('id' => 'doctor', 'name' => 'doctor', 'class' => 'form-control', 'label' => false)); ?>
+				<?php echo $this->Form->input('user',array('type' => 'select', 'id' => 'doctor', 'name' => 'doctor', 'class' => 'form-control', 'label' => false, 'value' => $doctor)); ?>
 			</div>
 		      </div>
 		</div>
@@ -24,28 +23,7 @@
 			<div id="calendar"></div>
 		</div>
 	</div>
-  </section>
-<!--
-    <div class="column-left">
-      <div id="nav"></div>
-    </div>
-    <div class="column-main">
-      <div class="space">
-
-      <div class="form-group">
-	<label for="role" class="col-sm-2 control-label">M&eacute;dico</label>
-	<div class="col-sm-6 required">
-		<?php echo $this->Form->input('user',array('id' => 'doctor', 'name' => 'doctor', 'class' => 'form-control', 'label' => false)); ?>
-	 </div>
-       </div>
-      </div>
-      <div id="calendar"></div>
-    </div>
-
-  </div>
-</div>
-
--->
+</section>
 
 <script>
   var nav = new DayPilot.Navigator("nav");

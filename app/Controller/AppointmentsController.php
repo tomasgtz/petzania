@@ -304,6 +304,7 @@ WHERE (appointment_status = 'free' OR (appointment_status <> 'free' AND appointm
 		$response = new stdClass();
 
 		$arr['Appointment']['appointment_patient_name']		= $this->request->data['name'];
+		$arr['Appointment']['appointment_patient_phone']	= $this->request->data['phone'];
 		$arr['Appointment']['appointment_patient_session']	= $session;
 		$arr['Appointment']['appointment_status']			= 'waiting';
 
@@ -447,8 +448,10 @@ WHERE (appointment_status = 'free' OR (appointment_status <> 'free' AND appointm
 		
 		$this->loadModel('User');
 		$users = $this->User->find('list', array('fields' => array('User.id', 'User.name'), 'conditions' => array( 'User.status_id' => '1')));
+		$doctor = $this->Auth->user('id');
 
 		$this->set(compact('users'));
+		$this->set('doctor', $doctor);
 	}
 
 	public function appointment_edit($id) {
