@@ -207,7 +207,7 @@ class UsersController extends AppController {
             $this->User->recursive = 0;
             $User = $this->User->read();
 
-            $mailer = new CakeEmail('Petszania');
+            $mailer = new CakeEmail('petszania');
             $mailer->from(array('no-reply@ypetszania' => 'Petszania'));
             $mailer->to($User['User']['username']);
             $mailer->subject('Restablecimiento de contraseña de la cuenta de Petszania');
@@ -231,7 +231,7 @@ class UsersController extends AppController {
             $this->User->recursive = 0;
             $User = $this->User->read();
 
-            $mailer = new CakeEmail('Petszania');
+            $mailer = new CakeEmail('petszania');
             $mailer->from(array('no-reply@ypetszania' => 'Petszania'));
             $mailer->to($User['User']['username']);
             $mailer->subject('La contraseña del portal Petszania ha sido cambiada');
