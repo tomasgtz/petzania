@@ -67,7 +67,7 @@
         <!-- AdminLTE for demo purposes -->
         <?php echo $this->Html->script("/dist/js/demo.js"); ?>
         <style type="text/css">.error-message{color: red;font-weight: bold;} #flashMessage{display: none}</style>
-	 <?php echo $this->Html->script(array("jquery-1.9.1.min")); ?>
+	
 	 <?php echo $this->Html->script(array("daypilot-all.min")); ?>
 
 	 <?php echo $this->Html->css("appointment"); ?>

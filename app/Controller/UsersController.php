@@ -89,10 +89,12 @@ class UsersController extends AppController {
         
         if ($this->request->is(array('post', 'put'))) {
             $user = $this->User->findById($id);
+
             // Las contraseñas no cambiaron
             if ($user['User']['password'] !== $this->request->data['User']['password']) {
                 $validatePassword = $this->ForgotPassword->validateStrengthPassword($this->request->data['User']['password'], $this->request->data['User']['password']);
-                if ($validatePassword !== true) {
+				
+				if ($validatePassword !== true) {
                     $this->Flash->success($this->ForgotPassword->errorMessages);
                     return $this->redirect(array('action' => 'edit', $id));
                 }
