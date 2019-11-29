@@ -89,12 +89,11 @@ class EmailConfig {
 	);
 
 	public $petszania = array(
-		'host' => 'ssl://mail.petszania.com',
+		'host' => 'ssl://vpsmx.yokatia.mx',
 		'port' => 465,
 		'username' => 'no-reply@petszania.com',
-		'password' => '7s6h4nmgz2yi',
+		'password' => '',
 		'transport' => 'Smtp',
-		'log' => true,
-		'ssl' => true
+		'log' => true
 	);
 }

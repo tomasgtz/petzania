@@ -5,7 +5,7 @@
     <p><a href="<?php echo 'http://' . env('SERVER_NAME') . '/consola/Users/reset_password_token/' . $User['User']['reset_password_token']; ?>">Restaurar contraseña</a></p>
     <p>
         Gracias<br>
-        El equipo CADCAM<br>
+        petszania.com<br>
         *Nota: Favor de no contestar este correo
     </p>
 </div>
