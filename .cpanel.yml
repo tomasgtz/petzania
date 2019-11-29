@@ -3,3 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/petszania/public_html/
     - /bin/cp -R /home/petszania/repositories/petzania/* $DEPLOYPATH
+    - /bin/cp /home/petszania/repositories/petzania/database.php $DEPLOYPATH/app/Config/
+    - /bin/cp /home/petszania/repositories/petzania/email.php $DEPLOYPATH/app/Config/
