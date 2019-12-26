@@ -24,7 +24,7 @@ class PagesController extends AppController {
      * @return void
      */
     public function index() {
-        
+        $this->layout = 'index' ;
     }
 
 	public function display() {
@@ -52,14 +52,14 @@ class PagesController extends AppController {
     public function beforeFilter() {
         parent::beforeFilter();
         // Allow users to register and logout.
-        //$this->Auth->allow('logout', 'forgotPassword', 'reset_password_token');
+        $this->Auth->allow('index');
     }
 
     
 
     public function isAuthorized($user) {
-        // debug($this->request);
-        // die;
+         debug($this->request);
+         die;
         return true;
     }
 

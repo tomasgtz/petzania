@@ -46,7 +46,7 @@ class AppController extends Controller {
      * @param type $text
      */
     public function assignTitle($text) {
-        $this->titlePage = 'N035 | ' . $this->titlePage . ' | ' . $text;
+        $this->titlePage = 'Pets zania | ' . $this->titlePage . ' | ' . $text;
     }
 
     public $components = array(
@@ -54,7 +54,7 @@ class AppController extends Controller {
         'Session',
         'Auth' => array(
             'loginRedirect' => array(
-                'controller' => 'Companies',
+                'controller' => 'Users',
                 'action' => 'index',
                 'base' => false,
             ),
@@ -83,7 +83,7 @@ class AppController extends Controller {
     }
 
     public function beforeFilter() {
-         $this->Auth->allow('pay','processpay');
+         $this->Auth->allow('index');
     }
 
 }

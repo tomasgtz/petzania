@@ -4,6 +4,7 @@
   <meta charset="UTF-8"/>
   <title>Agenda tu cita</title>
   <?php echo $this->Html->css('/bower_components/bootstrap/dist/css/bootstrap.min.css'); ?>
+  <?php echo $this->Html->css('/css/template/font-awesome.min.css'); ?>
 
 
   <?php echo $this->Html->css("appointment"); ?>
@@ -19,6 +20,16 @@
 
 <div class="jumbotron">
     <div class="container">
+      <?php 
+      
+      echo $this->Html->link( $this->Html->tag('i', '', array('class'=> 'fa fa-home fa-3x')).' Inicio', 
+				array(
+					'controller' => 'pages',
+					'action' => 'index'
+				), array('escape' => false)
+	);
+
+      ?>
       <h1 class="display-3">Reservaciones de citas</h1>
       <p>Gracias por su preferencia, a continuaci&oacute;n se muestra nuestro calendario de atenci&oacute;n<br>Cada celda marcada en <font color="green">verde</font> es un espacio disponible en el que puede solicitar una cita.</p>
     </div>
@@ -53,7 +64,7 @@
 </main>
 
 <footer class="container">
-  <p>&copy; Petszania 2019-2021</p>
+  <p>&copy; Pet's zania 2019-2021</p>
 </footer>
 </body>
 </html>
